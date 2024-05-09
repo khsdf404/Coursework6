@@ -1,0 +1,43 @@
+version: '3'
+
+
+services:
+  
+  react-container:
+    container_name: react-container
+    build: ./react-container
+    volumes:
+      - ./react-container:/react-container
+      - ./react-container/node_modules:/react-container/node_modules
+    ports:
+      - 3000:3000
+    depends_on:
+      - java-container
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    
+    
+
+  java-container:
+    container_name: java-container
+    build: ./java-container
+    ports:
+      - 8080:8080
+    environment:
+      - DATABASE_URL=jdbc:postgresql://postgres:5432/postgres
+      - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=postgres
+    depends_on:
+      - postgres
+
+
+  postgres:
+    container_name: postgres
+    image: postgres:12
+    ports:
+      - 5431:5431
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+      

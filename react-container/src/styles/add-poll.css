@@ -1,0 +1,82 @@
+.addPollAside {
+    background-image: url('./icons/add.svg');
+}
+
+#addPollView > input {
+    font-size: var(--medium-fontsize);
+    align-self: flex-start;
+    border-bottom: 3px solid var(--based-color-dark);
+
+    
+    margin: 10px 10px;
+}
+#addPollView > input::placeholder {
+    color: var(--based-color-dark);
+}
+
+.addPoll-buttons {
+    display: flex;   
+
+    width: 100%;
+}
+
+.addPoll-buttons > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+
+    color: var(--revert-color);
+    background-color: var(--accent-color);
+    border-radius: 3px;
+    border: 1px solid var(--revert-color);
+
+    font-weight: 900;
+}
+
+
+
+
+.question-form {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+
+    width: calc(100% - 50px);
+
+    margin: 10px;
+    padding: 15px;
+
+    border: 1px solid var(--accent-color);
+    border-radius: 3px;
+
+}
+
+.question-form section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 10px 15px;
+}
+
+.question-form div {
+    min-width: 80px;
+    color: var(--based-color);
+    font-size: var(--medium-fontsize);
+    display: flex;
+    align-items: center;
+}
+.question-form input {
+    min-width: 50px;
+    width: calc(90% - 80px);
+    flex: 1;
+    height: 30px;
+    margin-left: 15px;
+    
+    border-bottom: 2px solid var(--based-color-dark);
+
+    font-size: var(--medium-fontsize);
+}

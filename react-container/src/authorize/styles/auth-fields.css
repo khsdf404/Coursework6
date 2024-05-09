@@ -1,0 +1,50 @@
+section.authorization-info input {
+    width: 200px;
+    
+    margin: 15px 0;
+    padding: 6px 0 6px 2px;
+
+    background: #fff0;
+
+    border-bottom: 2px solid var(--based-color);
+}
+
+section.authorization-info.sign-up input {
+    margin: 30px 0;
+}
+
+section.authorization-info input:placeholder-shown {
+    text-align: center;
+    border-bottom: 2px solid var(--based-color-dark);
+}
+section.authorization-info input:placeholder-shown:focus {
+    text-align: start;
+}
+
+section.authorization-info input::placeholder {
+    color: var(--based-color);
+    opacity: 0.65;
+}
+section.authorization-info span {
+    position: absolute;
+    opacity: 0;
+    top: 24px;
+    left: 25px;
+    z-index: -1;
+    
+    transition: .3s all;
+}
+section.authorization-info input:placeholder-shown:focus + span {
+    top: -4px;
+    left: 25px;
+    opacity: 0.65;
+}
+
+section.authorization-info input:focus::placeholder {
+    opacity: 0;
+}
+
+section.authorization-info .hidden {
+    display: none;
+    opacity: 0;
+}

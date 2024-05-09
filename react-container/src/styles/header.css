@@ -1,0 +1,46 @@
+header {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+
+    height: var(--header-height);
+}
+
+
+header .header-logo {
+    margin: 0 0 0 var(--sidebar-width);
+    cursor: pointer;
+}
+header a {
+    letter-spacing: 2px;
+    font-size: var(--large-fontsize);
+}
+
+
+header section {
+    display: flex;
+    flex-direction: row;
+
+    margin: 0 40px;
+}
+
+
+header svg {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: var(--header-btnsize);
+    height: var(--header-btnsize);
+
+    margin: 0 8px;
+
+    background-color: var(--accent-color);
+
+    border-radius: 50%;
+}

@@ -1,0 +1,19 @@
+section.authorization-confirm {
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+}
+section.authorization-confirm > a, section.authorization-confirm > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 70%;
+    height: 48px;
+
+    border-radius: 3px;
+    background: var(--outer-bg);
+
+    font-size: 16px;
+ }

@@ -1,0 +1,93 @@
+main#authMain {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+
+    border-radius: 0;
+
+    overflow: hidden;
+}
+
+
+
+
+input, button, span {
+    font-size: var(--medium-fontsize);
+}
+
+
+article.authorization-card {
+    display: flex;
+    flex-direction: column;
+
+    width: 360px;
+
+    padding: 50px 0;
+
+    border: 1px solid var(--revert-color);
+    border-radius: 6px;
+    backdrop-filter: blur(10px);
+    background: var(--outer-bg);
+
+    font-family: var(--font);
+    color: var(--based-color);
+}
+
+
+section.authorization-type {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--based-color);
+}
+section.authorization-type > div {
+    border-bottom: 2px solid #fff0;
+
+    text-transform: uppercase;
+    font-size: var(--medium-fontsize);
+
+    opacity: 0.6;
+    cursor: pointer;
+
+    transition: .3s all;
+}
+section.authorization-type > div.active {
+    border-bottom: 2px solid var(--based-color);
+
+    opacity: 1;
+    cursor: auto;
+}
+
+
+
+section.authorization-info {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    flex: 1;
+    min-height: 370px;
+}
+section.authorization-info div {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    width: 70%;
+}
+
+
+
+
