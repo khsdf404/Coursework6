@@ -1,0 +1,62 @@
+.listPollAside {
+    background: url('./icons/list.svg');
+}
+
+#listPollView > div {
+    font-size: var(--large-fontsize);
+    font-weight: 900;
+}
+
+.poll-elem {
+    display: flex;
+    flex-direction: column;
+
+    width: 90%;
+    margin: 10px;
+
+    border-radius: 3px;
+    border: 1px solid #333;
+}
+
+
+.poll-elem > span {
+    margin: 0 22px;
+}
+.poll-elem > h3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 16px;
+    
+    margin-bottom: 15px;
+    padding: 20px 22px;
+    
+    background: var(--outer-bg);
+    font-size: var(--medium-fontsize);   
+}
+
+.poll-elem > div {
+    margin: 20px 20px 18px 20px;
+}
+.poll-elem > div > button {
+    align-self: flex-start;
+
+    width: 210px;
+    height: 40px;
+
+    margin: 4px 4px;
+
+    background-color: var(--accent-color);
+
+    color: var(--revert-color);
+    font-weight: 900;
+}
+
+.deleteIcon {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    color: var(--based-color);
+}

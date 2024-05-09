@@ -1,0 +1,110 @@
+:root {
+    --based-color: #fffb;
+    --based-color-dark: #fff5;
+    --revert-color: #333;
+    --accent-color: #eb6;
+    --accent-color-light: #fe9;
+    --outer-bg: #7979791c;
+    --main-bg: linear-gradient(-30deg, #000 40%, #211f28 100%);
+    
+    --font: 'Poppins', 'Montserrat';
+    --small-fontsize: 14px; 
+    --medium-fontsize: 18px;
+    --large-fontsize: 30px;
+
+
+    --header-height: 100px;
+    --header-btnsize: 44px;
+
+
+    --sidebar-width: 100px;
+    --sidebar-iconsize: 66px;
+    --sidebar-fontsize: 12px;
+
+
+    --view-offset: 40px;
+
+
+    --card-imagesize: 230px;
+    --card-maxheight: 280px;
+    --card-height: auto; /*calc(var(--card-imagesize) + 150px)*/;
+    --card-width: 260px;
+
+    --table-width: calc(90% - var(--view-offset) - var(--view-offset));
+    --table-minwidth: 420px;
+}
+
+
+html, body, #root {
+    position: relative;
+
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    background: var(--main-bg);
+
+    overflow: hidden;
+}
+#root {
+    background: none;
+}
+
+div, input, span, a, button, h1, h2, h3 {
+    outline: none;
+    text-decoration: none;
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    color: var(--based-color);
+    font-size: var(--small-fontsize);
+    font-family: var(--font);
+}
+
+
+
+
+
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    
+    width: auto;
+    height: calc(100% - var(--header-height));
+
+
+    color: var(--based-color);
+
+    border-top-left-radius: 20px;
+    background: var(--outer-bg);
+}
+
+
+
+
+
+.non-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #5555;
+}
