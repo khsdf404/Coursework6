@@ -1,22 +1,8 @@
 import React from 'react';
+import { AuthDB } from '../hooks/AuthDB';
 import { PollsDB } from '../hooks//PollsDB';
 import { ReactComponent as DeleteIcon } from '../styles/icons/x.svg'
 import '../styles/list-poll.css';
-
-
-function unsecuredCopyToClipboard(text) {
-	const textArea = document.createElement("textarea");
-	textArea.value = text;
-	document.body.appendChild(textArea);
-	textArea.focus();
-	textArea.select();
-	try {
-	  document.execCommand('copy');
-	} catch (err) {
-	  console.error('Unable to copy to clipboard', err);
-	}
-	document.body.removeChild(textArea);
-}
 
 class ListPoll extends React.Component {
 
@@ -51,7 +37,7 @@ class ListPoll extends React.Component {
 
 						<div>
 							<button onClick={() => {
-								unsecuredCopyToClipboard(`http://192.168.74.57:3000/reply/${row.link}`)
+								AuthDB.CopyReplyLink(row.link);
 								alert('Ссылка скопирована');
 							}}>Скопировать ссылку</button>
 							<button onClick={() => {

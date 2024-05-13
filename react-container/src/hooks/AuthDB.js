@@ -1,7 +1,7 @@
 import { LocalStorage }  from './LocalStorage';
 
-const WEB_URL = 'http://localhost:3000';
-const API_URL = 'http://localhost:8080';
+const WEB_URL = 'http://51.250.22.219:3000';
+const API_URL = 'http://51.250.22.219:8080';
 
 class AuthDB {
 
@@ -20,6 +20,20 @@ class AuthDB {
 
     static async UpdateUserInfo(user) {
         return await AuthDB.Request(`${API_URL}/auth/users/`, 'POST', user, LocalStorage.GetToken());
+    }
+
+    static CopyReplyLink(link) {
+        const textArea = document.createElement("textarea");
+        textArea.value = `${WEB_URL}/reply/${link}`;
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        try {
+        document.execCommand('copy');
+        } catch (err) {
+        console.error('Unable to copy to clipboard', err);
+        }
+        document.body.removeChild(textArea);
     }
 
     static async Redirect() {

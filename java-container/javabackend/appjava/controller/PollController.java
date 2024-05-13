@@ -21,7 +21,7 @@ import appjava.entity.Poll;
 import appjava.repository.PollRepository;
 import appjava.service.JwtService;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://51.250.22.219:3000")
 @RestController
 @RequestMapping("/api/polls/")
 public class PollController {

@@ -1,6 +1,6 @@
 import { LocalStorage } from './LocalStorage';
 
-const API_URL = 'http://localhost:8080';
+const API_URL = 'http://51.250.22.219:8080';
 
 class ReplyDB {
 

@@ -15,7 +15,9 @@ public class Jwt {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String ownerLogin;
+    @Column(length = 1024)
     private String accessToken;
+    @Column(length = 1024)
     private String refreshToken;
     
     
